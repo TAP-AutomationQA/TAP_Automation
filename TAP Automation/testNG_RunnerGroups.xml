@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="Regression TestSuite">
+	<test name="GroupsDemo">
+		<groups>
+			<define name="all">
+				<include name="commercial"></include>
+				<include name="awards"></include>
+				<include name="starflights"></include>
+			</define>
+			<define name="memberflights">
+				<include name="awards"></include>
+				<include name="starflights"></include>
+			</define>
+			<run>
+				<include name="memberflights"></include>
+			</run>
+		</groups>
+		<classes>
+			<class name="testNG_Collection.TestNG_Suite3"></class>
+		</classes>
+	</test>
+</suite>
